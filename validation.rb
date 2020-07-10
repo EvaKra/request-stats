@@ -21,7 +21,6 @@ def valid_json_format?(json)
         return false
 end
 
-
 # malformed JSON
 # missing one or more fields --> requests.length < 5
 # with a customer ID not found in the database  Customer.exists?(requests["customerID"])
