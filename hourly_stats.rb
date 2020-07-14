@@ -49,5 +49,3 @@ requests.each do |request|
         end
     end   
 end 
-
-p Hourly_stat.all
