@@ -11,7 +11,7 @@ we can properly charge customers for the traffic they send.
 ## Stats Table
  The stats table contains:
 * one entry per hour and per customer ID
-* the the number of valid requests
+* the number of valid requests
 * the number of invalid requests
 
 ## Usage
