@@ -28,11 +28,3 @@ def is_request_valid?(requests, serialized_requests)
         return false
     end
 end
-
-
-# malformed JSON
-# missing one or more fields --> requests.length < 5
-# with a customer ID not found in the database  Customer.exists?(requests["customerID"])
-# or for a customer which is disabled Customer.find(requests["customerID"]).active != 1
-# with a remote IP address which is in the blacklist Ip_blacklist.exists?(ip: (requests["remoteIP"]))
-# with a user agent which is in the blacklist 
