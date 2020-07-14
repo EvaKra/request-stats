@@ -14,12 +14,21 @@ def not_blacklisted(requests)
     !Ip_blacklist.exists?(ip: (requests["remoteIP"]))
 end
 
-def valid_json_format?(json)
-    JSON.parse(json)
+def valid_json_format?(requests)
+    JSON.parse(requests)
     return true
     rescue JSON::ParserError => e
         return false
 end
+
+def is_request_valid?(requests, serialized_requests)  
+    if valid_length(requests) && valid_cust_id(requests) && valid_status(requests) && not_blacklisted(requests) && valid_json_format?(serialized_requests)
+       return true
+    else
+        return false
+    end
+end
+
 
 # malformed JSON
 # missing one or more fields --> requests.length < 5

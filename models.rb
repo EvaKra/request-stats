@@ -1,4 +1,4 @@
-# Instead of loading all of Rails, load the
+#Instead of loading all of Rails, load the
 # particular Rails dependencies we need
 require 'sqlite3'
 require 'active_record'
@@ -6,9 +6,8 @@ require 'active_record'
 # Set up a database that resides in RAM
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
-  database: ':memory:'
+  database: ':database:'
 )
-
 
 # Set up database tables and columns
 ActiveRecord::Schema.define do
@@ -22,6 +21,7 @@ ActiveRecord::Schema.define do
   create_table "hourly_stats", force: :cascade do |t|
     t.integer  "customer_id"
     t.integer  "time"
+    t.string   "date"
     t.integer  "request_count"
     t.integer  "invalid_count"
     t.date "created_at", null: false
