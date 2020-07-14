@@ -9,4 +9,6 @@ required fields, …) but keep a history on a day-by-day basis so that
 we can properly charge customers for the traffic they send.
 
 ## Usage
+``` Ruby
 ruby interface.rb #will prompt for customer ID and date and will return stats for a specific customer on a specific day 
+```
