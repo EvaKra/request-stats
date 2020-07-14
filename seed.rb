@@ -20,10 +20,3 @@ ua_blacklist = ['A6-Indexer','Googlebot-News','Googlebot']
 ua_blacklist.each do |ua|
     ua_blacklist = Ua_blacklist.create(user_agent: ua)
 end
-
-# Seed Hourly_stats
-# Hourly_stat.create(customer_id: 1, time: 1594332659, request_count: 1 , invalid_count: 0)
-# Hourly_stat.create(customer_id: 2, time: 1594302658, request_count: 1 , invalid_count: 0)
-# Hourly_stat.create(customer_id: 3, time: 1594302659, request_count: 1 , invalid_count: 0)
-
-# p Hourly_stat.all

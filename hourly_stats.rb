@@ -2,7 +2,6 @@ require './seed'
 require 'json'
 require 'date'
 require './validation'
-require './request_count'
 
 #Parsing JSON
 filepath = 'requests.json'
@@ -51,6 +50,3 @@ requests.each do |request|
         end
     end   
 end 
-
-p "Final result"
-p Hourly_stat.all
