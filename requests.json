@@ -54,6 +54,13 @@
         "userID":"aaaaaaaa-bbbb-cccc-1111-222222222222",
         "remoteIP":"4294967295",
         "timestamp":1594364460
+    },
+    {
+        "customerID":8,
+        "tagID":2,
+        "userID":"aaaaaaaa-bbbb-cccc-1111-222222222222",
+        "remoteIP":"123.234.56.78",
+        "timestamp":1594364460
     }
 ]
 

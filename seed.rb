@@ -6,7 +6,6 @@ Customer.create(name: "Online Mega Store", active: 1)
 Customer.create(name: "Nachoroo Delivery", active: 0)
 Customer.create(name: "Euro Telecom Group", active: 1)
 
-
 # Seed IP_blacklists
 ip_blacklist = [0,2130706433,4294967295]
 
