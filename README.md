@@ -25,5 +25,6 @@ $ cd request-stats
 
 # Run the app
 ruby interface.rb 
-# This will prompt you for customer ID and date and will return stats for a specific customer on a specific day + the total number of requests for the day including the split of valid and invalid requests.
+# This will prompt you for customer ID and date
+# It will return stats for a specific customer on a specific day + the total number of requests for the day including the split of valid and invalid requests.
 ```
