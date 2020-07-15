@@ -15,6 +15,15 @@ we can properly charge customers for the traffic they send.
 * the number of invalid requests
 
 ## Usage
+
 ``` Ruby
-ruby interface.rb #will prompt for customer ID and date and will return stats for a specific customer on a specific day 
+# Clone this repository
+$ git clone https://github.com/EvaKra/request-stats
+
+# Go into the repository
+$ cd request-stats
+
+# Run the app
+ruby interface.rb 
+# This will prompt you for customer ID and date and will return stats for a specific customer on a specific day + the total number of requests for the day including the split of valid and invalid requests.
 ```
