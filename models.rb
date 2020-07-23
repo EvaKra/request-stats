@@ -1,5 +1,4 @@
-#Instead of loading all of Rails, load the
-# particular Rails dependencies we need
+#Loading dependencies we need
 require 'sqlite3'
 require 'active_record'
 

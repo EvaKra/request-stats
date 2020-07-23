@@ -13,7 +13,7 @@ requests.each do |request|
         if Hourly_stat.exists?(customer_id: request["customerID"])
             count = 0
             Hourly_stat.where(customer_id: request["customerID"]).each do |stat|   
-                if (request["timestamp"] - stat.time)/60/60 <= 24 && stat.date === DateTime.strptime("#{(request["timestamp"])}",'%s').strftime("%d/%m/%Y")
+                if (request["timestamp"] - stat.time)/60 <= 60 && stat.date === DateTime.strptime("#{(request["timestamp"])}",'%s').strftime("%d/%m/%Y")
                     stat.request_count = stat.request_count + 1
                     stat.date = DateTime.strptime("#{(request["timestamp"])}",'%s').strftime("%d/%m/%Y")
                     stat.save
@@ -30,7 +30,7 @@ requests.each do |request|
         if Hourly_stat.exists?(customer_id: request["customerID"])
             count = 0
             Hourly_stat.where(customer_id: request["customerID"]).each do |stat|   
-                if (stat.time - request["timestamp"])/60/60 <= 24 && stat.date === DateTime.strptime("#{(request["timestamp"])}",'%s').strftime("%d/%m/%Y")
+                if (stat.time - request["timestamp"])/60 <= 60  && stat.date === DateTime.strptime("#{(request["timestamp"])}",'%s').strftime("%d/%m/%Y")
                     stat.invalid_count = stat.invalid_count + 1
                     stat.date = DateTime.strptime("#{(request["timestamp"])}",'%s').strftime("%d/%m/%Y")
                     stat.save
